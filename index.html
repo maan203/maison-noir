@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison Noir — Private Residences</title>
+    <meta name="description" content="A private collection of extraordinary residences. By introduction only.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     HEADER
+═══════════════════════════════════════════════════════ -->
+<header class="site-header">
+    <span class="header-logo">M · N</span>
+    <nav class="header-nav">
+        <a href="#residences" class="header-link">Collection</a>
+        <a href="#contact"    class="header-link header-link--cta">Enquire</a>
+    </nav>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════
+     HERO — scroll-scrubbed frame sequence
+═══════════════════════════════════════════════════════ -->
+<section class="hero-track" id="hero" aria-label="Cinematic entrance">
+    <div class="hero-sticky">
+        <canvas id="heroCanvas" aria-hidden="true"></canvas>
+        <div id="heroFallback" class="hero-fallback" aria-hidden="true"></div>
+        <div id="heroOverlay"  class="hero-overlay"  aria-hidden="true"></div>
+        <div class="hero-vignette" aria-hidden="true"></div>
+        <div id="heroContent" class="hero-content">
+            <span class="hero-brand">Maison Noir</span>
+            <h1 class="hero-headline">Step <em>inside</em>.</h1>
+            <p class="hero-sub">Private residences&thinsp;&middot;&thinsp;By invitation only</p>
+        </div>
+        <div id="scrollCue" class="scroll-cue" aria-hidden="true">
+            <span class="scroll-cue-text">Scroll to enter</span>
+            <div class="scroll-cue-line"></div>
+        </div>
+        <div id="heroLoading" class="hero-loading" aria-hidden="true">
+            <div class="hero-loading-track"><div id="heroLoadFill" class="hero-loading-fill"></div></div>
+            <span id="heroLoadPct" class="hero-loading-pct">0%</span>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     MANIFESTO
+═══════════════════════════════════════════════════════ -->
+<section class="section manifesto" id="about">
+    <div class="container container--narrow">
+        <div class="reveal"><span class="section-label">— The House</span></div>
+        <div class="reveal" data-delay="0.12">
+            <h2 class="section-headline manifesto-headline">
+                A residence is not found.<br>
+                <em>It is entered.</em>
+            </h2>
+        </div>
+        <div class="reveal" data-delay="0.24">
+            <p class="body-text">
+                We are a private studio working at the intersection of architecture and silence.
+                Each property in our collection has been held, observed, and chosen for its capacity
+                to disappear — to become the precise weight of air that makes a life feel inevitable.
+                We do not list. We introduce.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     NUMBERS
+═══════════════════════════════════════════════════════ -->
+<section class="section numbers" id="numbers">
+    <div class="container">
+        <div class="numbers-grid">
+            <div class="number-item reveal" data-delay="0">
+                <span class="number-value" data-target="25">0</span>
+                <span class="number-unit">Years</span>
+                <span class="number-label">In private practice</span>
+            </div>
+            <div class="number-item reveal" data-delay="0.1">
+                <span class="number-value" data-target="180">0</span>
+                <span class="number-unit">Properties</span>
+                <span class="number-label">Placed quietly</span>
+            </div>
+            <div class="number-item reveal" data-delay="0.2">
+                <span class="number-value" data-target="12">0</span>
+                <span class="number-unit">Countries</span>
+                <span class="number-label">Without announcement</span>
+            </div>
+            <div class="number-item reveal" data-delay="0.3">
+                <span class="number-value" data-target="2">0</span>
+                <span class="number-unit">Billion+</span>
+                <span class="number-label">In discreet transactions</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     RESIDENCES
+═══════════════════════════════════════════════════════ -->
+<section class="section residences" id="residences">
+    <div class="container">
+        <div class="reveal"><span class="section-label">— Current Collection</span></div>
+        <div class="reveal" data-delay="0.1">
+            <h2 class="section-headline">Selected residences.</h2>
+        </div>
+        <div class="residence-grid">
+
+            <a href="#contact" class="residence-card reveal" data-delay="0.0">
+                <div class="residence-image-wrap">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=1000&q=80&auto=format&fit=crop" alt="Villa Aether" class="residence-image" loading="lazy">
+                    <div class="residence-hover-overlay" aria-hidden="true"></div>
+                    <span class="residence-badge">Available</span>
+                </div>
+                <div class="residence-info">
+                    <h3 class="residence-title">Villa Aether</h3>
+                    <span class="residence-location">Côte d'Azur, France</span>
+                    <p class="residence-desc">Six bedrooms. Pool terrace dissolving into the Esterel. A house that holds the last of the light.</p>
+                </div>
+            </a>
+
+            <a href="#contact" class="residence-card reveal" data-delay="0.12">
+                <div class="residence-image-wrap">
+                    <img src="https://images.unsplash.com/photo-1480796927426-f609979314bd?w=800&h=1000&q=80&auto=format&fit=crop" alt="House of Quiet" class="residence-image" loading="lazy">
+                    <div class="residence-hover-overlay" aria-hidden="true"></div>
+                    <span class="residence-badge">By introduction</span>
+                </div>
+                <div class="residence-info">
+                    <h3 class="residence-title">House of Quiet</h3>
+                    <span class="residence-location">Kyoto, Japan</span>
+                    <p class="residence-desc">A converted machiya in Nishiki, restored over four years. Garden by Nakagawa. Completely private.</p>
+                </div>
+            </a>
+
+            <a href="#contact" class="residence-card reveal" data-delay="0.06">
+                <div class="residence-image-wrap">
+                    <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=1000&q=80&auto=format&fit=crop" alt="The Long Room" class="residence-image" loading="lazy">
+                    <div class="residence-hover-overlay" aria-hidden="true"></div>
+                    <span class="residence-badge">Available</span>
+                </div>
+                <div class="residence-info">
+                    <h3 class="residence-title">The Long Room</h3>
+                    <span class="residence-location">Sussex, England</span>
+                    <p class="residence-desc">A Georgian farmhouse with a converted barn. Ten acres of managed woodland. Discreet and complete.</p>
+                </div>
+            </a>
+
+            <a href="#contact" class="residence-card reveal" data-delay="0.18">
+                <div class="residence-image-wrap">
+                    <img src="https://images.unsplash.com/photo-1485872299829-c673f5194813?w=800&h=1000&q=80&auto=format&fit=crop" alt="Tower XII" class="residence-image" loading="lazy">
+                    <div class="residence-hover-overlay" aria-hidden="true"></div>
+                    <span class="residence-badge">By introduction</span>
+                </div>
+                <div class="residence-info">
+                    <h3 class="residence-title">Tower XII</h3>
+                    <span class="residence-location">Manhattan, New York</span>
+                    <p class="residence-desc">Floors 42–44. Double-height ceilings. Private elevator lobby. Views north to Central Park.</p>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     PHILOSOPHY
+═══════════════════════════════════════════════════════ -->
+<section class="section philosophy" id="philosophy">
+    <div class="container">
+        <div class="reveal"><span class="section-label">— Principles</span></div>
+        <div class="reveal" data-delay="0.1">
+            <h2 class="section-headline">Three rules,<br>kept quietly.</h2>
+        </div>
+        <div class="principles-grid">
+            <div class="principle reveal" data-delay="0">
+                <span class="principle-numeral">I</span>
+                <h3 class="principle-title">Restraint</h3>
+                <p class="principle-body">Nothing is added without reason. A room earns each element it holds. The absence of a thing can be the thing itself.</p>
+            </div>
+            <div class="principle reveal" data-delay="0.15">
+                <span class="principle-numeral">II</span>
+                <h3 class="principle-title">Material</h3>
+                <p class="principle-body">Stone remembers. Timber breathes. Glass carries the hour. We choose materials the way one chooses words — carefully, and finally.</p>
+            </div>
+            <div class="principle reveal" data-delay="0.3">
+                <span class="principle-numeral">III</span>
+                <h3 class="principle-title">Discretion</h3>
+                <p class="principle-body">Our properties are never listed. Introductions are made by hand. What you find here, you carry alone.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     PROCESS
+═══════════════════════════════════════════════════════ -->
+<section class="section process" id="process">
+    <div class="container">
+        <div class="reveal"><span class="section-label">— How it works</span></div>
+        <div class="reveal" data-delay="0.1">
+            <h2 class="section-headline">A quiet process,<br>in three movements.</h2>
+        </div>
+        <div class="process-steps">
+            <div class="process-step reveal" data-delay="0">
+                <div class="process-step-header">
+                    <span class="process-step-num">01</span>
+                    <div class="process-step-line"></div>
+                </div>
+                <h3 class="process-step-title">Introduction</h3>
+                <p class="process-step-body">You write to us. We read carefully. If the alignment is right, we arrange a private conversation — no obligation, no presentation decks.</p>
+            </div>
+            <div class="process-step reveal" data-delay="0.15">
+                <div class="process-step-header">
+                    <span class="process-step-num">02</span>
+                    <div class="process-step-line"></div>
+                </div>
+                <h3 class="process-step-title">Selection</h3>
+                <p class="process-step-body">We present only what we believe is right for you. Never a catalogue. Never a shortlist of twenty. Usually three. Sometimes one.</p>
+            </div>
+            <div class="process-step reveal" data-delay="0.3">
+                <div class="process-step-header">
+                    <span class="process-step-num">03</span>
+                    <div class="process-step-line"></div>
+                </div>
+                <h3 class="process-step-title">Transition</h3>
+                <p class="process-step-body">Legal, financial, and logistical complexity disappears. We manage every detail. You enter your new residence on the day it is ready.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     PRESS
+═══════════════════════════════════════════════════════ -->
+<section class="section press" id="press">
+    <div class="container">
+        <div class="reveal"><span class="section-label">— As seen in</span></div>
+        <div class="press-logos">
+            <span class="press-name reveal" data-delay="0.0">Financial Times</span>
+            <span class="press-divider" aria-hidden="true">·</span>
+            <span class="press-name reveal" data-delay="0.08">Wallpaper*</span>
+            <span class="press-divider" aria-hidden="true">·</span>
+            <span class="press-name reveal" data-delay="0.16">Architectural Digest</span>
+            <span class="press-divider" aria-hidden="true">·</span>
+            <span class="press-name reveal" data-delay="0.24">The World of Interiors</span>
+            <span class="press-divider" aria-hidden="true">·</span>
+            <span class="press-name reveal" data-delay="0.32">Monocle</span>
+        </div>
+        <div class="press-quote reveal" data-delay="0.2">
+            <blockquote>
+                <p>"The most discreet luxury practice operating today. If you have to ask, you're not ready."</p>
+                <cite>— Wallpaper*, Issue 312</cite>
+            </blockquote>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     GET IN TOUCH
+═══════════════════════════════════════════════════════ -->
+<section class="section contact" id="contact">
+    <div class="container">
+        <div class="contact-inner">
+
+            <!-- Left: headline + info -->
+            <div class="contact-left">
+                <div class="reveal"><span class="section-label">— Introductions</span></div>
+                <div class="reveal" data-delay="0.1">
+                    <h2 class="section-headline contact-headline">Get<br><em>in touch.</em></h2>
+                </div>
+                <div class="reveal" data-delay="0.2">
+                    <p class="contact-description">
+                        We respond personally to every introduction.
+                        There are no automated replies. Please allow
+                        48 hours — we read everything.
+                    </p>
+                </div>
+                <div class="contact-details reveal" data-delay="0.3">
+                    <div class="contact-detail">
+                        <span class="contact-detail-label">Offices</span>
+                        <span class="contact-detail-value">Paris · Kyoto · New York</span>
+                    </div>
+                    <div class="contact-detail">
+                        <span class="contact-detail-label">For press</span>
+                        <span class="contact-detail-value">press@maisonnoir.com</span>
+                    </div>
+                    <div class="contact-detail">
+                        <span class="contact-detail-label">Private tours</span>
+                        <span class="contact-detail-value">By appointment only</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: form -->
+            <div class="contact-right reveal" data-delay="0.15">
+                <form id="contactForm" class="contact-form" novalidate>
+
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label class="form-label" for="fname">Your name</label>
+                            <input type="text" id="fname" name="name" class="form-input" placeholder="Full name" autocomplete="name">
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label" for="femail">Your email</label>
+                            <input type="email" id="femail" name="email" class="form-input" placeholder="email@address.com" autocomplete="email">
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label" for="finterest">What draws you</label>
+                        <select id="finterest" name="interest" class="form-input form-select">
+                            <option value="" disabled selected>Select a category</option>
+                            <option value="acquire">Acquiring a residence</option>
+                            <option value="sell">Placing a property privately</option>
+                            <option value="tour">Requesting a private tour</option>
+                            <option value="other">Other enquiry</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label" for="fmessage">Your note</label>
+                        <textarea id="fmessage" name="message" class="form-input form-textarea" placeholder="Tell us what you are looking for. The more honest, the better we can help." rows="5"></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit">
+                        <span class="form-submit-text">Send message</span>
+                        <svg class="form-submit-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                            <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+
+                    <p class="form-footnote">
+                        Prefer to speak? <a href="mailto:hello@maisonnoir.com" class="form-footnote-link">Email us directly</a>
+                    </p>
+
+                </form>
+
+                <div class="form-success" id="formSuccess">
+                    <div class="form-success-inner">
+                        <span class="form-success-mark">✦</span>
+                        <p class="form-success-text">Your note has been received.<br>We will be in touch within 48 hours.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════ -->
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-top-inner">
+                <div class="footer-brand">
+                    <span class="footer-logo">Maison · Noir</span>
+                    <p class="footer-tagline">Private residences.<br>Since 2001.</p>
+                </div>
+                <div class="footer-links-group">
+                    <span class="footer-links-heading">Navigate</span>
+                    <a href="#about"      class="footer-link">The House</a>
+                    <a href="#residences" class="footer-link">Collection</a>
+                    <a href="#philosophy" class="footer-link">Principles</a>
+                    <a href="#contact"    class="footer-link">Contact</a>
+                </div>
+                <div class="footer-links-group">
+                    <span class="footer-links-heading">Offices</span>
+                    <span class="footer-link">12 Rue du Faubourg, Paris</span>
+                    <span class="footer-link">Gion, Kyoto</span>
+                    <span class="footer-link">57th Street, New York</span>
+                </div>
+                <div class="footer-links-group">
+                    <span class="footer-links-heading">Contact</span>
+                    <a href="mailto:hello@maisonnoir.com" class="footer-link">hello@maisonnoir.com</a>
+                    <a href="mailto:press@maisonnoir.com" class="footer-link">press@maisonnoir.com</a>
+                    <a href="#contact" class="footer-link">Book a private tour</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom-inner">
+                <span class="footer-copy">© MMXXVI Maison Noir. All rights reserved.</span>
+                <span class="footer-cities">Paris&thinsp;·&thinsp;Kyoto&thinsp;·&thinsp;New York</span>
+                <span class="footer-legal">Privacy&ensp;·&ensp;Terms</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
